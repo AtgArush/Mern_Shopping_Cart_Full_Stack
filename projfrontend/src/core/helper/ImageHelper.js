@@ -1,0 +1,17 @@
+import React from 'react'
+import { API } from '../../backend';
+
+const ImageHelper = ({product}) => {
+    const imageUrl = product ? `${API}/product/photo/${product._id}` : "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    return (
+        <div className="rounded p-3" style={{border: "5px solid #ffc107", marginBottom: "10px", backgroundColor: "#202833"}}>
+            <img
+              src={imageUrl}
+              alt="photo"
+              style={{ maxHeight: "100%", maxWidth: "100%" }}
+            />
+          </div>
+    )
+}
+
+export default ImageHelper;
